@@ -2,6 +2,25 @@
 
 # PHP&SQL
 
+
+## day10 2019-3-26
+
+### Web Security
+
+- XSS(Cross-Site Scripting)
+  
+    在別人的網頁上執行 JavaScript
+    最簡單的：alert(1),` <h1>test</h1>`
+    `<img src="123" onerror="alert(1);">`
+    `<script>window.location="https://google.com/"</script>`
+    只要能執行 JavaScript，就能做任何事(甚至是竊取資料庫)
+    1. 竄改頁面
+    2. 竄改連結
+    3. 偷 Cookie
+    解決方法：escape，跳脫
+    echo htmlspecialchars($str, ENT_QUOTES, ‘utf-8’)
+
+
 ## day9 2019-3-25
 
 ### 實作出可以登入的留言系統

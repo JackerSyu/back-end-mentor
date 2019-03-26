@@ -1,10 +1,10 @@
 <div class='comment'>
   <div class='comment__header'>
-    <div class='comment__author'><? echo $row['nickname'] ?></div>
+    <div class='comment__author'><? echo htmlspecialchars($row['nickname'], ENT_QUOTES, 'utf-8') ?></div>
     <div class='comment__timestamp'><?echo $row['created_at'] ?></div>
   </div>
   <div class='comment__content'>
-    <?echo $row['content'] ?>
+    <? echo htmlspecialchars($row['content'], ENT_QUOTES, 'utf-8') ?>
   </div>
   <div class='board__subcomments'>
 <?
